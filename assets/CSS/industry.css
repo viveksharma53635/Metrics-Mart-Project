@@ -1,0 +1,950 @@
+/* ==========================================================================
+   METRICS MART INFOLINE PVT LTD — INDUSTRY SECTION STYLES
+   Scoped to .mmd-industry-page and .mmd-industry-* classes only.
+   Brand palette: --brand-gold: #4caf92 | --brand-ink: #111111
+   ========================================================================== */
+
+/* ── Page wrapper ─────────────────────────────────────────────────────────── */
+.mmd-industry-page {
+    background-color: var(--bg-white);
+    color: var(--text-main);
+}
+
+/* ── Hero ─────────────────────────────────────────────────────────────────── */
+.mmd-industry-hero {
+    position: relative;
+    background: linear-gradient(135deg, #0d1f1a 0%, #0f2820 55%, #163528 100%);
+    color: #ffffff;
+    padding: 90px 0 80px;
+    overflow: hidden;
+}
+
+.mmd-industry-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 60% 60% at 80% 50%, rgba(76,175,146,0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 70% at 10% 20%, rgba(76,175,146,0.08) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.mmd-industry-hero::after {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 400px;
+    height: 400px;
+    border: 1px solid rgba(76,175,146,0.15);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.mmd-hero-inner {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 50px;
+    align-items: center;
+}
+
+.mmd-hero-content {
+    max-width: 720px;
+}
+
+.mmd-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.mmd-breadcrumbs a {
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.mmd-breadcrumbs a:hover {
+    color: var(--brand-gold);
+}
+
+.mmd-breadcrumbs i {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.4);
+}
+
+.mmd-breadcrumbs .mmd-bc-current {
+    color: var(--brand-gold);
+    font-weight: 600;
+}
+
+.mmd-hero-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(76,175,146,0.18);
+    border: 1px solid rgba(76,175,146,0.35);
+    color: #7dd3bb;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 22px;
+}
+
+.mmd-hero-h1 {
+    font-size: clamp(1.9rem, 3.5vw, 2.9rem);
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.mmd-hero-h1 span {
+    color: var(--brand-gold);
+}
+
+.mmd-hero-desc {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.78);
+    line-height: 1.75;
+    margin-bottom: 32px;
+    max-width: 600px;
+}
+
+.mmd-hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+/* Hero side card */
+.mmd-hero-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(76,175,146,0.3);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    min-width: 240px;
+    max-width: 300px;
+    backdrop-filter: blur(8px);
+    flex-shrink: 0;
+}
+
+.mmd-hero-card h3 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+}
+
+.mmd-hero-checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mmd-hero-checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.4;
+}
+
+.mmd-hero-checklist li i {
+    color: var(--brand-gold);
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+/* ── Industry Introduction (2-col) ─────────────────────────────────────────── */
+.mmd-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.mmd-intro-img {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, #e5f5ef 0%, #c8ecdf 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mmd-intro-img-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--brand-gold);
+    gap: 16px;
+    padding: 40px;
+    text-align: center;
+}
+
+.mmd-intro-img-placeholder i {
+    font-size: 5rem;
+    opacity: 0.6;
+}
+
+.mmd-intro-img-placeholder span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    opacity: 0.75;
+}
+
+.mmd-intro-text .section-kicker {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.mmd-intro-text h2 {
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    margin-bottom: 18px;
+}
+
+.mmd-intro-text p {
+    color: var(--text-muted);
+    line-height: 1.75;
+}
+
+.mmd-challenge-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mmd-challenge-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.93rem;
+    color: var(--text-main);
+}
+
+.mmd-challenge-list li i {
+    color: var(--brand-gold);
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+/* ── Industry Grid (Cards) ──────────────────────────────────────────────────── */
+.mmd-industry-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+@media (max-width: 1024px) {
+    .mmd-industry-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .mmd-industry-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Industry Card ──────────────────────────────────────────────────────────── */
+.mmd-industry-card {
+    background: var(--bg-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.mmd-industry-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--brand-gold), var(--brand-gold-hover));
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.mmd-industry-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(76,175,146,0.3);
+}
+
+.mmd-industry-card:hover::before {
+    opacity: 1;
+}
+
+.mmd-card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-md);
+    background: var(--brand-gold-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: var(--brand-gold);
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.mmd-industry-card:hover .mmd-card-icon {
+    background: var(--brand-gold);
+    color: #ffffff;
+    transform: scale(1.1) rotate(-3deg);
+}
+
+.mmd-card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-navy);
+    margin: 0;
+}
+
+.mmd-card-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    flex: 1;
+    margin: 0;
+}
+
+.mmd-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    text-decoration: none;
+    transition: var(--transition);
+    padding: 10px 18px;
+    border: 1.5px solid var(--brand-gold);
+    border-radius: var(--radius-sm);
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.mmd-card-link:hover {
+    background: var(--brand-gold);
+    color: var(--brand-ink);
+    transform: translateX(3px);
+}
+
+.mmd-card-link i {
+    font-size: 0.75rem;
+    transition: transform 0.2s;
+}
+
+.mmd-card-link:hover i {
+    transform: translateX(3px);
+}
+
+/* ── Service Cards Grid ─────────────────────────────────────────────────────── */
+.mmd-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 1024px) {
+    .mmd-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .mmd-services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.mmd-service-card {
+    background: var(--bg-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 26px 24px;
+    transition: var(--transition);
+}
+
+.mmd-service-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: rgba(76,175,146,0.3);
+    transform: translateY(-3px);
+}
+
+.mmd-svc-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius-md);
+    background: var(--brand-gold-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: var(--brand-gold);
+    margin-bottom: 16px;
+    transition: var(--transition);
+}
+
+.mmd-service-card:hover .mmd-svc-icon {
+    background: var(--brand-gold);
+    color: #ffffff;
+}
+
+.mmd-service-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-navy);
+    margin-bottom: 8px;
+}
+
+.mmd-service-card p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin: 0;
+}
+
+.mmd-service-card a.mmd-svc-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-top: 12px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.mmd-service-card a.mmd-svc-link:hover {
+    color: var(--brand-gold);
+    transform: translateX(2px);
+}
+
+/* ── Feature Cards (Why industry-specific) ─────────────────────────────────── */
+.mmd-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 1024px) {
+    .mmd-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .mmd-features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.mmd-feature-card {
+    padding: 28px 24px;
+    background: var(--bg-white);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+    border-left: 3px solid var(--brand-gold);
+    transition: var(--transition);
+}
+
+.mmd-feature-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+.mmd-feature-card i {
+    font-size: 1.8rem;
+    color: var(--brand-gold);
+    margin-bottom: 14px;
+    display: block;
+}
+
+.mmd-feature-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-navy);
+}
+
+.mmd-feature-card p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ── Process Steps ──────────────────────────────────────────────────────────── */
+.mmd-industry-process {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    position: relative;
+}
+
+.mmd-industry-process::before {
+    content: '';
+    position: absolute;
+    top: 32px;
+    left: 50px;
+    right: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--brand-gold), rgba(76,175,146,0.3));
+    z-index: 0;
+}
+
+@media (max-width: 1024px) {
+    .mmd-industry-process {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .mmd-industry-process::before {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .mmd-industry-process {
+        grid-template-columns: 1fr;
+    }
+}
+
+.mmd-process-step {
+    background: var(--bg-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 28px 22px;
+    position: relative;
+    z-index: 1;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.mmd-process-step:hover {
+    box-shadow: var(--shadow-md);
+    border-color: rgba(76,175,146,0.4);
+    transform: translateY(-4px);
+}
+
+.mmd-step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--brand-gold);
+    color: var(--brand-ink);
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin: 0 auto 16px;
+    font-family: var(--font-heading);
+}
+
+.mmd-process-step h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-navy);
+    margin-bottom: 8px;
+}
+
+.mmd-process-step p {
+    font-size: 0.87rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ── FAQ Accordion ──────────────────────────────────────────────────────────── */
+.mmd-industry-faq {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mmd-faq-item {
+    background: var(--bg-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: box-shadow 0.25s ease;
+}
+
+.mmd-faq-item.is-active {
+    border-color: rgba(76,175,146,0.4);
+    box-shadow: 0 4px 16px rgba(76,175,146,0.1);
+}
+
+.mmd-faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: var(--font-heading);
+    font-size: 0.97rem;
+    font-weight: 600;
+    color: var(--text-navy);
+    transition: color 0.2s ease;
+}
+
+.mmd-faq-question:hover {
+    color: var(--primary-blue);
+}
+
+.mmd-faq-item.is-active .mmd-faq-question {
+    color: var(--primary-blue);
+}
+
+.mmd-faq-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--brand-gold-soft);
+    color: var(--primary-blue);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    line-height: 1;
+    transition: background 0.2s, transform 0.25s ease;
+}
+
+.mmd-faq-item.is-active .mmd-faq-icon {
+    background: var(--brand-gold);
+    color: var(--brand-ink);
+    transform: rotate(45deg);
+}
+
+.mmd-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mmd-faq-item.is-active .mmd-faq-answer {
+    max-height: 400px;
+}
+
+.mmd-faq-answer-inner {
+    padding: 0 24px 20px;
+    font-size: 0.93rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+}
+
+/* ── CTA Section ────────────────────────────────────────────────────────────── */
+.mmd-industry-cta {
+    background: linear-gradient(135deg, #0d1f1a 0%, #163528 100%);
+    padding: 70px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.mmd-industry-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(76,175,146,0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.mmd-cta-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.mmd-cta-inner h2 {
+    font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+    color: #ffffff;
+    margin-bottom: 16px;
+    font-weight: 800;
+}
+
+.mmd-cta-inner p {
+    color: rgba(255,255,255,0.75);
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+}
+
+.mmd-cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ── Related Industries ─────────────────────────────────────────────────────── */
+.mmd-related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .mmd-related-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.mmd-related-card {
+    background: var(--bg-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 22px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: var(--text-navy);
+    transition: var(--transition);
+}
+
+.mmd-related-card:hover {
+    border-color: rgba(76,175,146,0.4);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+    color: var(--primary-blue);
+}
+
+.mmd-related-card i.mmd-related-icon {
+    font-size: 1.6rem;
+    color: var(--brand-gold);
+    flex-shrink: 0;
+}
+
+.mmd-related-card span {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.mmd-related-card i.mmd-related-arrow {
+    margin-left: auto;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    transition: transform 0.2s;
+}
+
+.mmd-related-card:hover i.mmd-related-arrow {
+    transform: translateX(4px);
+    color: var(--brand-gold);
+}
+
+/* ── Two-column layout utility ──────────────────────────────────────────────── */
+.mmd-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.mmd-two-col.mmd-reverse {
+    direction: rtl;
+}
+
+.mmd-two-col.mmd-reverse > * {
+    direction: ltr;
+}
+
+@media (max-width: 900px) {
+    .mmd-two-col,
+    .mmd-two-col.mmd-reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        gap: 36px;
+    }
+}
+
+/* ── Stats / Highlights bar ─────────────────────────────────────────────────── */
+.mmd-highlights-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    background: var(--brand-gold-soft);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+@media (max-width: 900px) {
+    .mmd-highlights-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .mmd-highlights-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.mmd-highlight-item {
+    padding: 32px 24px;
+    text-align: center;
+    border-right: 1px solid rgba(76,175,146,0.25);
+}
+
+.mmd-highlight-item:last-child {
+    border-right: none;
+}
+
+.mmd-highlight-item i {
+    font-size: 2rem;
+    color: var(--brand-gold);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.mmd-highlight-item h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-navy);
+    margin-bottom: 4px;
+}
+
+.mmd-highlight-item p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* ── Industry hero nav pills on landing page ─────────────────────────────────── */
+.mmd-ind-nav-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.mmd-ind-nav-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 16px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(76,175,146,0.3);
+    border-radius: 20px;
+    color: rgba(255,255,255,0.8);
+    font-size: 0.82rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.mmd-ind-nav-pill:hover {
+    background: var(--brand-gold);
+    border-color: var(--brand-gold);
+    color: var(--brand-ink);
+}
+
+/* ── Our Working Process on landing page ─────────────────────────────────────── */
+.mmd-process-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 900px) {
+    .mmd-process-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 540px) {
+    .mmd-process-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Responsive overrides ───────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .mmd-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+    .mmd-hero-card {
+        max-width: 100%;
+    }
+    .mmd-intro-grid,
+    .mmd-two-col {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+    .mmd-industry-process::before {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .mmd-industry-hero {
+        padding: 60px 0 50px;
+    }
+    .mmd-hero-h1 {
+        font-size: 1.75rem;
+    }
+    .mmd-industry-process {
+        grid-template-columns: 1fr;
+    }
+    .mmd-highlights-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .mmd-related-grid {
+        grid-template-columns: 1fr;
+    }
+    .mmd-features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .mmd-hero-actions {
+        flex-direction: column;
+    }
+    .mmd-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
